@@ -35,7 +35,7 @@ class PostItems extends Component {
         let componet
         try{
           componet= !isEmpty(post.Postphoto)?( <img src={require(`../../postPhoto/${post.Postphoto}`) } className="postimg m-2" alt="User posted picture"></img>):null
-       }catch(err){ window.location.reload()}
+       }catch(err){ console.log(err)}
         return ( 
             <div className="card card-body mb-3">
               <div className="row">
