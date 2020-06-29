@@ -43,7 +43,7 @@ exports.resizePhoto=async(req,res,next)=>{
     const email=await USer.findOne({email:req.body.email})
     if(email)return next()
   req.file.filename= `${req.body.email}-user.jpeg`;
-    sharp(req.file.buffer).resize(500,500).toFormat('jpeg').jpeg({quality:80}).toFile(`my-app/src/photo/${req.file.filename}`)
+    sharp(req.file.buffer).resize(500,500).toFormat('jpeg').jpeg({quality:80}).toFile(`my-app/build/media/${req.file.filename}`)
     next()
 }
 exports.resizePhoto2=async(req,res,next)=>{
@@ -52,6 +52,6 @@ exports.resizePhoto2=async(req,res,next)=>{
   
     
   req.file.filename= `${Date.now()}-post.jpeg`;
-    await sharp(req.file.buffer).resize(500,500).toFormat('jpeg').jpeg({quality:80}).toFile(`my-app/src/postPhoto/${req.file.filename}`)
+    await sharp(req.file.buffer).resize(500,500).toFormat('jpeg').jpeg({quality:80}).toFile(`my-app/build/media/${req.file.filename}`)
     next()
 }
