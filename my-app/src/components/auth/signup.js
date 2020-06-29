@@ -121,9 +121,9 @@ class Signup extends Component {
                                     />
                                 <div className="form-group profileimg">
                                     <img className="dpimg" src={this.state.src} alt="Profile"></img>
-                                    <label className="profile-lable" onClick={this.setDefault}> Default
+                                    <label className="btn btn-danger" onClick={this.setDefault}> Default
                                     </label>
-                                    <label className="profile-lable">Profile Photo
+                                    <label className="btn btn-primary m-2">Profile Photo
                                     <input type="file" id="inputImage" className="form-control form-control-lg" onChange={this.setFile} placeholder="Display photo" name="file" accept="image/*" />
                                     </label>
                                 </div>

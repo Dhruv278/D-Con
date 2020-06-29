@@ -78,7 +78,7 @@ class PostForm extends Component {
                                     </label>):(
                                         <div >
                                          <img className="postimg" src={this.state.src} alt="Profile"></img>
-                                         <label className=" m-2 btn btn-primary" onClick={this.setDefault}> Cancle Photo
+                                         <label className=" m-2 btn btn-danger" onClick={this.setDefault}> Cancle Photo
                                          </label>
                                          <label className=" m-2 btn btn-primary">Change Photo
                                          <input type="file" id="inputImage" className="form-control form-control-lg" onChange={this.setFile} placeholder="Display photo" name="file" accept="image/*" />
