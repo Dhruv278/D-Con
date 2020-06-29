@@ -28,7 +28,7 @@ function App() {
     const decode = jwt_decode(Cookies.get('jwt'))
     // console.log(decode.exp > Date.now())
   
-    if (decode.exp > Date.now()/1000) {
+    if (decode.exp > Date.now()) {
       store.dispatch(SetUser(decode.user))
     }else{
       Cookies.remove('jwt')

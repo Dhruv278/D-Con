@@ -1,31 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.047f7323.chunk.css",
-    "main.js": "/static/js/main.39fca338.chunk.js",
-    "main.js.map": "/static/js/main.39fca338.chunk.js.map",
+    "main.js": "/static/js/main.3e78f211.chunk.js",
+    "main.js.map": "/static/js/main.3e78f211.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7c0ae09a.js",
     "runtime-main.js.map": "/static/js/runtime-main.7c0ae09a.js.map",
-    "static/js/2.b16bf468.chunk.js": "/static/js/2.b16bf468.chunk.js",
-    "static/js/2.b16bf468.chunk.js.map": "/static/js/2.b16bf468.chunk.js.map",
+    "static/js/2.ed217af2.chunk.js": "/static/js/2.ed217af2.chunk.js",
+    "static/js/2.ed217af2.chunk.js.map": "/static/js/2.ed217af2.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8c3d6161e70e26a135f0819568bae3bf.js": "/precache-manifest.8c3d6161e70e26a135f0819568bae3bf.js",
+    "precache-manifest.a23dadc6fe56b5b501687beef01babd0.js": "/precache-manifest.a23dadc6fe56b5b501687beef01babd0.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.047f7323.chunk.css.map": "/static/css/main.047f7323.chunk.css.map",
-    "static/js/2.b16bf468.chunk.js.LICENSE.txt": "/static/js/2.b16bf468.chunk.js.LICENSE.txt",
-    "static/media/1593256941421-post.jpeg": "/static/media/1593256941421-post.59991e02.jpeg",
-    "static/media/1593258516426-post.jpeg": "/static/media/1593258516426-post.59991e02.jpeg",
-    "static/media/1593258769525-post.jpeg": "/static/media/1593258769525-post.f3188f45.jpeg",
-    "static/media/1593262282421-post.jpeg": "/static/media/1593262282421-post.95b7cee7.jpeg",
-    "static/media/1593271744516-post.jpeg": "/static/media/1593271744516-post.95b7cee7.jpeg",
-    "static/media/1593337761902-post.jpeg": "/static/media/1593337761902-post.59991e02.jpeg",
+    "static/js/2.ed217af2.chunk.js.LICENSE.txt": "/static/js/2.ed217af2.chunk.js.LICENSE.txt",
     "static/media/default.jpg": "/static/media/default.5881650b.jpg",
-    "static/media/dhruvgopani8@gmail.com-user.jpeg": "/static/media/dhruvgopani8@gmail.com-user.95b7cee7.jpeg",
     "static/media/App.css": "/static/media/showcase.4b31330b.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7c0ae09a.js",
-    "static/js/2.b16bf468.chunk.js",
+    "static/js/2.ed217af2.chunk.js",
     "static/css/main.047f7323.chunk.css",
-    "static/js/main.39fca338.chunk.js"
+    "static/js/main.3e78f211.chunk.js"
   ]
 }
