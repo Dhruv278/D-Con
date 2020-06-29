@@ -40,12 +40,14 @@ export const getPosts=()=>dispatch=>{
         })
 
     }).catch(err=>{
-      
+      console.log(err)
+      console.log(err.response)
+      console.log('inside action')
         dispatch({
             type:action.GET_POSTS,
             payload:null
         })
-        window.location.reload()
+     
        
     })
 }
