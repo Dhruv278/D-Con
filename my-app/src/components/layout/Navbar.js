@@ -39,7 +39,7 @@ class Navbar extends Component {
         <Link className="nav-link" to="/dashboard">Dashboard</Link>
         <Link className="nav-link" to="/post">Posts</Link>
         <li className="nav-item">
-          {user.photo && (<img src={require(`../../photo/${user.photo}`)} alt="UserPhoto" className="imgsrc" ></img>)}
+          {user.photo && (<img src={`./media/${user.photo}`} alt="UserPhoto" className="imgsrc" ></img>)}
           
 
         </li>
