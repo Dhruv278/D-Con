@@ -6,6 +6,7 @@ const app=express();
 const globalError=require('./serverside/util/globalError');
 var bodyParser = require('body-parser');
 const cookieParser=require('cookie-parser');
+const compression =require('compression')
 
 const path=require('path')
 
@@ -13,7 +14,7 @@ const path=require('path')
 app.use(cookieParser())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-
+app.use(compression())
 app.use(express.json({ limit: '10kb' }));
 app.use('/api/v1/user' ,userRoute);
 app.use('/api/v1/profile',ProfileRoute)
