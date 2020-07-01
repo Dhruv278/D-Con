@@ -10,7 +10,7 @@ exports.createPost = catchAsync(async (req, res, next) => {
     const newPost = await Post.create({
         user: req.user.id,
         photo:req.user.photo,
-        name: req.body.name,
+        name: req.user.name,
         text: req.body.text,
         Postphoto:filename
 
