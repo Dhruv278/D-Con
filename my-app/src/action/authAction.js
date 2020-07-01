@@ -1,11 +1,8 @@
 import * as action from './types'
 import axios from 'axios';
 import Cookies from 'js-cookie'
-export const registerUser = (userdata, form,history) => dispatch => {
-    axios.post('/api/v1/user/signup', form, {
-
-        "Content-Type": "multipart/form-data"
-    }).then(res => {
+export const registerUser = (userdata,history) => dispatch => {
+    axios.post('/api/v1/user/signup', userdata).then(res => {
         if (res.data.token) {
             dispatch(SetUser(res.data.user))
            history.push('/dashboard')

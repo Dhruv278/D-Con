@@ -101,10 +101,10 @@ if(!newProfile)return next(new Error('Please login again',400))
         current:req.body.current,
         discription:req.body.discription
     };
-    console.log(newEducation)
+    // console.log(newEducation)
    await newProfile.education.unshift(newEducation)
   await newProfile.save()
-   console.log(newProfile)
+//    console.log(newProfile)
    res.status(200).json({
        status:'success',
        profile:newProfile

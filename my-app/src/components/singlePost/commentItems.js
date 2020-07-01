@@ -13,13 +13,13 @@ onDelete=(e)=>{
         const {comment}=this.props;
         const user=this.props.auth;
 
-        console.log(comment)
+        // console.log(comment)
         return ( 
             <div className="card card-body mb-3">
               <div className="row">
                 <div className="col-md-2 commentdiv" >
                   <a href="profile.html">
-                    <img className="rounded-circle commentimg d-md-block mb-2" src={require(`../../photo/${comment.photo}`)} alt="" />
+                    <img className="rounded-circle commentimg d-md-block mb-2" src={comment.photo} alt="" />
                   </a>
                   
         <p className="text-center text-bold">{comment.name}</p>

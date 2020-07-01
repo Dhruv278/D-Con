@@ -5,12 +5,9 @@ import isContains from './isCOntain'
 
 export const addPost=postData=>dispatch=>{
     dispatch(setPostLoading())
-    axios.post('/api/v1/post/createPost',postData,{
-
-        "Content-Type": "multipart/form-data"
-    })
+    axios.post('/api/v1/post/createPost',postData)
     .then(res=>{
-        console.log(res.data)
+        // console.log(res.data)
         dispatch({
             type:action.ADD_POST,
             payload:res.data.post
@@ -41,8 +38,8 @@ export const getPosts=()=>dispatch=>{
 
     }).catch(err=>{
       console.log(err)
-      console.log(err.response)
-      console.log('inside action')
+    //   console.log(err.response)
+    //   console.log('inside action')
         dispatch({
             type:action.GET_POSTS,
             payload:null
@@ -72,7 +69,7 @@ export const addLike =id=>dispatch=>{
     axios.post(`/api/v1/post/like/${id}`).then(res=>
         dispatch(getPosts())
         ).catch(err=>{
-            console.log(err.response.data.message)
+            // console.log(err.response.data.message)
             dispatch({
                 type:action.GET_ERRORS,
                 payload:{}
@@ -84,7 +81,7 @@ export const unLike =id=>dispatch=>{
     axios.post(`/api/v1/post/unlike/${id}`).then(res=>
         dispatch(getPosts())
         ).catch(err=>{
-            console.log(err.response.data.message)
+            // console.log(err.response.data.message)
             dispatch({
                 type:action.GET_ERRORS,
                 payload:{}
@@ -103,7 +100,7 @@ export const getPost=(id)=>dispatch=>{
         })
     }
         ).catch(err=>{
-            console.log(err.response)
+            // console.log(err.response)
             dispatch({
                 type:action.GET_POST,
                 payload:{}
@@ -112,7 +109,7 @@ export const getPost=(id)=>dispatch=>{
 }
 
 export const addComment=(id,text)=>dispatch=>{
-    console.log(text)
+    // console.log(text)
     axios.post(`/api/v1/post/comment/${id}`,text)
     .then(res=>
         dispatch({
@@ -120,7 +117,7 @@ export const addComment=(id,text)=>dispatch=>{
             payload:res.data.post
         })
         ).catch(err=>{
-            console.log(err.response)
+            // console.log(err.response)
 
             dispatch({
                 type:action.GET_ERRORS,

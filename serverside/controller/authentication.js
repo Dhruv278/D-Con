@@ -27,9 +27,9 @@ const sendtoken=async (req,res,statuscode,user)=>{
 }
 
 exports.signup=catchAsync(async(req,res,next)=>{
-    if(req.file===undefined){filename='default.jpg'}
-    else{filename=req.file.filename}
-
+    if(req.body.file===null){filename='https://firebasestorage.googleapis.com/v0/b/dcon-1ec91.appspot.com/o/images%2Fdefault.jpg?alt=media&token=f878dfe0-3549-4c04-aaa9-6c9294a2941a'}
+    else{filename=req.body.file}
+// console.log(req.body.file)
     const newUser= await User.create({
         name:req.body.name,
         email:req.body.email,

@@ -10,7 +10,7 @@ class ProfileItem extends Component {
         return (<div className="card card-body bg-light mb-3">
             <div className="row">
                 <div className="imgprofiles pl-3">
-                    <img src={require(`../../photo/${profile.user.photo}`)} alt="User Photo" className="img"></img>
+                    <img src={profile.user.photo} alt="User Photo" className="img"></img>
 
                 </div>
                 <div className="col-lg-6 col-md-4 col-8">

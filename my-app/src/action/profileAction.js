@@ -212,7 +212,7 @@ export const deleteEducation=(id)=>dispatch=>{
 
 export const getProfiles=()=>dispatch=>{
     axios.get('/api/v1/profile/all').then(res=>{
-        console.log(res)
+        // console.log(res)
         dispatch({
           type:action.GET_PROFILES,
           payload:res.data.profiles  

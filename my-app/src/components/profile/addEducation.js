@@ -29,7 +29,7 @@ class AddEducation extends Component {
     }
     onSubmit=(e)=>{
      e.preventDefault()
-     console.log(this.state)
+    //  console.log(this.state)
      this.props.addEducation(this.state,this.props.history)
     }
     onClick=()=>{

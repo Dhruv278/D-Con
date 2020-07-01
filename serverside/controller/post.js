@@ -5,8 +5,8 @@ const User = require('../schema/user');
 const fs=require('fs')
 
 exports.createPost = catchAsync(async (req, res, next) => {
-    if(req.file===undefined){filename=null}
-    else{filename=req.file.filename}
+    if(req.body.file===null){filename=null}
+    else{filename=req.body.file}
     const newPost = await Post.create({
         user: req.user.id,
         photo:req.user.photo,

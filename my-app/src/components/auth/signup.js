@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom'
 import React, { Component } from 'react';
+import {storage} from '../../firebase/index'
 
 import { connect } from 'react-redux'
 import { registerUser } from './../../action/authAction'
@@ -47,19 +48,47 @@ class Signup extends Component {
     }
     onsubmit = (event) => {
         event.preventDefault()
-        const form = new FormData()
-
-        form.append('file', this.state.file)
-
-
-        form.append('email', this.state.email)
-        form.append('password', this.state.password)
-        form.append('confirm_password', this.state.confirm_password)
-        form.append('name', this.state.name)
-
-
-        // console.log(this.state)
-        this.props.registerUser(this.state, form,this.props.history)
+        // console.log('working')
+        if (this.state.file !== null) {
+            let image = this.state.file
+            const defaultdate=`${Date.now()}`
+            const uploadTask = storage.ref(`userimages/${defaultdate}`).put(image)
+            uploadTask.on(
+                "state_changed",
+                snapshot => { },
+                error => {
+                    console.log(error);
+                },
+                () => {
+                    storage.ref('userimages')
+                        .child(defaultdate)
+                        .getDownloadURL()
+                        .then(url => {
+                            const obj = {
+                                name: this.state.name,
+                                email: this.state.email,
+                                password: this.state.password,
+                                confirm_password: this.state.confirm_password,
+                                file: url
+                            }
+                            console.log(obj)
+                            this.props.registerUser(obj,this.props.history)
+                            
+                        })
+                }
+            )
+        } else {
+            const obj = {
+                name: this.state.name,
+                email: this.state.email,
+                password: this.state.password,
+                confirm_password: this.state.confirm_password,
+                file: null
+            }
+            console.log(obj)
+            this.props.registerUser(obj,this.props.history)
+        }
+        
       
 
     }
