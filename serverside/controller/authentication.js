@@ -15,7 +15,7 @@ const SignupToken = user => {
 const sendtoken=async (req,res,statuscode,user)=>{
     const token=await SignupToken(user)
     res.cookie('jwt', token, {
-        expires: new Date(Date.now() + process.env.EXPIRE_TIME * 24 * 60 * 60 * 1000),
+        expires: new Date(Date.now() + process.env.COOKIE_EXPIRE_TIME * 24 * 60 * 60 * 1000),
         // httpOnly: true,
         // secure: req.secure || req.headers['x-forwarded-photo'] ==='https'
     });
