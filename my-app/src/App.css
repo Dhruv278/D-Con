@@ -4,7 +4,7 @@ img {
 
 .landing {
   position: relative;
-  background: url('img/showcase.jpg') no-repeat;
+  background: url('https://firebasestorage.googleapis.com/v0/b/dcon-1ec91.appspot.com/o/images%2Fshowcase.4b31330b.jpg?alt=media&token=b795bd88-34d3-433d-adfe-3f8342fef246') no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
