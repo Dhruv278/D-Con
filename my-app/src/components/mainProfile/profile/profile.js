@@ -27,9 +27,9 @@ class Profile extends Component {
         if(isEmpty(profile) ||loading){
 
             profileContent=<Spinner />
-            window.setTimeout(()=>{
-               window.location.assign('/profiles')
-            },15000)
+            // window.setTimeout(()=>{
+            //    window.location.assign('/profiles')
+            // },15000)
         }else{
             profileContent=(
                 <div>
