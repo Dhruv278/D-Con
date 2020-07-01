@@ -7,13 +7,14 @@ const globalError=require('./serverside/util/globalError');
 var bodyParser = require('body-parser');
 const cookieParser=require('cookie-parser');
 const compression =require('compression')
-
+const helmet =require('helmet');
 const path=require('path')
 
 // Add this line below
-app.use(cookieParser())
+app.enable('trust proxy')
+app.use(helmet())
 app.use(bodyParser.urlencoded({ extended: false }))
-
+app.use(cookieParser())
 app.use(compression())
 app.use(express.json({ limit: '10kb' }));
 app.use('/api/v1/user' ,userRoute);
