@@ -16,7 +16,7 @@ app.use(helmet())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(compression())
-app.use(express.json({ limit: '10kb' }));
+app.use(express.json({ limit: '12kb' }));
 app.use('/api/v1/user' ,userRoute);
 app.use('/api/v1/profile',ProfileRoute)
 app.use('/api/v1/post',PostRoute);
