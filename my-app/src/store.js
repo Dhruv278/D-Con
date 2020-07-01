@@ -2,7 +2,7 @@ import { createStore, applyMiddleware,compose} from 'redux';
 import thunk from 'redux-thunk'
 import rootReducer from './reducer'
 const middleware=[thunk]
-
+let store;
 if(process.env.NODE_ENV === 'production') {
     store = createStore(rootReducer, {}, compose(
         applyMiddleware(...middleware)
