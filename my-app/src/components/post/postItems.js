@@ -44,7 +44,7 @@ class PostItems extends Component {
                     <img className="rounded-circle d-none d-md-block" alt="pic of user" src={post.photo} alt="" />
                   </a>
                   <br />
-       <p className="text-center"> <strong >{post.user.name}</strong> </p>
+       <p className="text-center"> <strong >{post.name}</strong> </p>
                 </div>
                 <div className="col-md-10">
         <p className="lead">{post.text}</p>
