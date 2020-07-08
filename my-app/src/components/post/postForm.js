@@ -39,7 +39,7 @@ class PostForm extends Component {
                                 text: this.state.text,
                                 file: url
                             }
-                            console.log(obj)
+                            
                             this.props.addPost(obj)
                         })
                 }
@@ -49,7 +49,7 @@ class PostForm extends Component {
                 text: this.state.text,
                 file: null,
             }
-            console.log(obj)
+            
             this.props.addPost(obj)
         }
         //  this.props.addPost(form)

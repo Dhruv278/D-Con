@@ -4,7 +4,7 @@ class ProfileHeader extends Component {
     
     render() { 
         const {profile} = this.props
-        console.log(profile)
+      
         return ( 
          
                  <div className="row">

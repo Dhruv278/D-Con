@@ -71,7 +71,7 @@ class Signup extends Component {
                                 confirm_password: this.state.confirm_password,
                                 file: url
                             }
-                            console.log(obj)
+                            
                             this.props.registerUser(obj,this.props.history)
                             
                         })
@@ -85,7 +85,7 @@ class Signup extends Component {
                 confirm_password: this.state.confirm_password,
                 file: null
             }
-            console.log(obj)
+            
             this.props.registerUser(obj,this.props.history)
         }
         

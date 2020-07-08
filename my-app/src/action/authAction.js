@@ -39,7 +39,7 @@ export const registerUser = (userdata,history) => dispatch => {
 
 export const loginuser = (form,history)=> dispatch => {
     axios.post('/api/v1/user/login', form).then(res => {
-                  console.log(res.data)
+                  
           dispatch(SetUser(res.data.user))
         history.push('/dashboard')
 

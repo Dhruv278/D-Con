@@ -8,7 +8,7 @@ exports.createPost = catchAsync(async (req, res, next) => {
     if(req.body.file===null){filename=null}
     else{filename=req.body.file}
     const newPost = await Post.create({
-        user: req.user.id,
+        user: req.user._id,
         photo:req.user.photo,
         name: req.user.name,
         text: req.body.text,
@@ -61,7 +61,7 @@ exports.deletePost = catchAsync(async (req, res, next) => {
 exports.likePost = catchAsync(async (req, res, next) => {
 
     const post = await Post.findById(req.params.id);
-console.log('working')
+
     if (!post) return (new Error('There is no post with this id', 400))
 
     if (post.likes.filter(like => like.user.toString() === req.user.id).length > 0) return next(new Error('you already like this post', 401))
