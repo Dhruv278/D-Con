@@ -65,7 +65,7 @@ class PostItems extends Component {
                     Comments
                   </Link>
                 
-                  {post.user.toString() === user._id.toString() ?(
+                  {post.user._id === user._id ?(
                        <button type="button" className="btn btn-danger mr-1" onClick={()=>this.deletepost(post._id)}>
                        <i className="fas fa-times" />
                      </button> 
