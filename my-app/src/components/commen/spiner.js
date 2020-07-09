@@ -5,15 +5,15 @@ export default () =>{
     
    
         return ( 
-            <div>
+         
                 <img
                 src={spinner}
-                style={{width:'100px',margin:'auto'}}
+                style={{width:'100px',margin:'auto',opacity:0.4}}
                 alt='Loading...'
                 >
 
                 </img>
-            </div>
+           
          );
     
 }
