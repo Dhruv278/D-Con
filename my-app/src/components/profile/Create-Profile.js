@@ -173,7 +173,7 @@ class CreateProfile extends Component {
                                     value={this.state.githubusername}
                                     onChange={this.onChange}
                                     error={errors.githubusername}
-                                    info="City,state eg.(Mumbai,Maharastra)"
+                                    info="Enter your github username"
 
                                 />
                                 <TextFeildGroup
