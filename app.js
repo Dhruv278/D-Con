@@ -26,9 +26,9 @@ if(process.env.NODE_ENV==='production'){
    
     app.use(express.static(path.join(__dirname,'my-app/build')))
     
+    console.log(path.join(__dirname,'my-app/build/index.html'))
     app.use('*',(req,res)=>{
         console.log(__dirname)
-            console.log(path.join(__dirname,'my-app/build/index.html'))
         res.sendFile(path.resolve(__dirname,'my-app/build/index.html'))
     //    res.send('hello')/
     })
